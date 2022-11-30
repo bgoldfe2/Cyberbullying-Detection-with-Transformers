@@ -38,6 +38,9 @@ def run():
     # Text encoding occurs at model instantiation  
     train_dataset = generate_dataset(train_df)
     print("train_dataset object is of type -- ",type(train_dataset))
+    print("Print Whole object at location 1 -- ", train_dataset[1]['input_ids'])
+    encoding = train_dataset[1]['input_ids']
+    print("token example is -- ",train_dataset.tokenizer.convert_ids_to_tokens(encoding))
     asfd
     train_data_loader = torch.utils.data.DataLoader(
         dataset = train_dataset,
