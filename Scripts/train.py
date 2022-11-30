@@ -31,8 +31,14 @@ def run():
 
     print(set(train_df.label.values))
     print("train len - {}, valid len - {}, test len - {}".format(len(train_df), len(valid_df),len(test_df)))
+    for col in train_df.columns:
+        print(col)
+    print("train example text -- ",train_df.text[1],"\nwith target -- ", train_df.label[1])
 
+    # Text encoding occurs at model instantiation  
     train_dataset = generate_dataset(train_df)
+    print("train_dataset object is of type -- ",type(train_dataset))
+    asfd
     train_data_loader = torch.utils.data.DataLoader(
         dataset = train_dataset,
         batch_size = args.train_batch_size,
