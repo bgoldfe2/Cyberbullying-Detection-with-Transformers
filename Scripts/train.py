@@ -111,6 +111,7 @@ def run():
         history['val_acc'].append(val_acc)
         history['val_loss'].append(val_loss)
 
+        # SAVE MODEL if best so far going through epochs
         if val_acc>best_acc:
             torch.save(model.state_dict(), f"{args.model_path}{args.pretrained_model}_Best_Val_Acc.bin")
 

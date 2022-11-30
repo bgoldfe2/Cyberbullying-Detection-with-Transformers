@@ -39,6 +39,7 @@ class BertFGBC(nn.Module):
         bo = self.drop2(bo)
         #print(f'Dropout2 - {bo.shape}')
 
+        # the return are the values of the last linear layer for each category
         output = self.out(bo)
         #print(f'Output - {output.shape}')
         return output
