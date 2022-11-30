@@ -41,7 +41,10 @@ def run():
     print("Print Whole object at location 1 -- ", train_dataset[1]['input_ids'])
     encoding = train_dataset[1]['input_ids']
     print("token example is -- ",train_dataset.tokenizer.convert_ids_to_tokens(encoding))
-    asfd
+    
+    # Nov 30 afternoon stopping point
+    # Able to get the tokens out of the BertDataset object
+    
     train_data_loader = torch.utils.data.DataLoader(
         dataset = train_dataset,
         batch_size = args.train_batch_size,
