@@ -3,6 +3,6 @@
 Output/*.csv
 Final Training
 Scripts/__pycache__/
-Figures/
 Dataset/*.*
 Models/*.csv
+Paper\ Figures/
